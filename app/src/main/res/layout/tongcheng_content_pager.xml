@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingTop="2dp"
+            android:layout_height="40dp"
+            android:background="#fff">
+            <cn.duckr.duckr.utils.CircleImageView
+                android:id="@+id/share_tc_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/share_tc_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/share_tc_img"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:text="用户"/>
+            <TextView
+                android:id="@+id/share_tc_user_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/share_tc_img"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/share_tc_username"
+                android:textColor="#7d7d7d"
+                android:gravity="center"
+                android:layout_alignBottom="@id/share_tc_img"
+                android:textSize="10sp"
+                android:text="类型"/>
+            <TextView
+                android:id="@+id/share_tc_user_age"
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/share_tc_username"
+                android:layout_marginLeft="10dp"
+                android:textColor="#fff"
+                android:background="@drawable/boy"
+                android:gravity="center_vertical|right"
+                android:paddingRight="3dp"
+                android:textSize="10sp"
+                android:text="99"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/share_tc_content"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:elegantTextHeight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:ellipsize="end"
+            android:textColor="#000"
+            android:background="#fff"
+            android:textSize="16dp"
+            android:maxLines="3"
+            android:text=""/>
+
+
+        <GridLayout
+            android:id="@+id/share_tc_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#fff">
+        </GridLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="#fff"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/share_tc_datecount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#7d7d7d"
+                    android:textSize="12sp"
+                    android:text="3天前 | 北京市海淀区"
+                    android:layout_weight="2.8" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_tourpic_comment"/>
+                    <TextView
+                        android:id="@+id/share_tc_pinglun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#7d7d7d"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="评论"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="3dp"
+                        android:button="@null"
+                        android:background="@drawable/dianzan"/>
+                    <TextView
+                        android:id="@+id/share_tc_xingqu"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#7d7d7d"
+                        android:textSize="15sp"
+                        android:text="感兴趣"/>
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

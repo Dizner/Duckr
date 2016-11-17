@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home__hd__content_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.duckr.duckr.Home_HD_Content_Activity">
+    <WebView
+        android:id="@+id/home_content_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_g"
+        >
+
+    </WebView>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/fanhui_1"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="black"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/fenxiang_1"/>
+    <LinearLayout
+        android:id="@+id/btn_g"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e6eae3"
+            android:layout_below="@id/home_content_web"
+            android:layout_above="@+id/btn_g"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:layout_weight="1" >
+                <ImageView
+                    android:id="@+id/btn_zx"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/zixun"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="咨询"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:layout_weight="1" >
+                <ImageView
+                    android:id="@+id/btn_xq"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/xingqu_2"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="感兴趣"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btn_yy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#f08300"
+                android:layout_weight="1.7"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:text="发起邀约"
+                />
+            <TextView
+                android:id="@+id/btn_gm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#e83929"
+                android:onClick="onClick"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_weight="1.7"
+                android:text="立即购买"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

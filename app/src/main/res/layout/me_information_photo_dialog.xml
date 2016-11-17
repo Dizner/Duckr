@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e3e3e3">
+
+    <Button
+        android:id="@+id/me_information_photo_dialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍摄图片"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="#e3e3e3"
+        android:onClick="onclickphotodialog"/>
+
+    <Button
+        android:id="@+id/me_information_photo_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择图片"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="#e3e3e3"
+        android:onClick="onclickphotodialog"/>
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.duckr.duckr.PhotoActivity"
+    android:background="#000">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photo_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        />
+    <ImageView
+        android:id="@+id/photo_more"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/ic_more"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/photo_back"
+        android:layout_width="10dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignTop="@id/photo_more"
+        android:layout_alignBottom="@id/photo_more"
+        android:background="@drawable/small_back"/>
+
+    <TextView
+        android:id="@+id/photo_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2/9"
+        android:layout_alignBottom="@+id/photo_more"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/photo_more" />
+</RelativeLayout>

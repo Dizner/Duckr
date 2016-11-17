@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_me_setting_about_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.duckr.duckr.activity.MeActivity.Me_setting_Activitys.Me_setting_about_Activity">
+
+</RelativeLayout>

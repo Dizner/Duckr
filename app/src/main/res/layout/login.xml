@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/w_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:id="@+id/w_2"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:clickable="false"
+        android:background="#fff"
+        android:layout_below="@+id/w_1"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/w_7"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/w_2"
+        android:layout_alignStart="@+id/w_2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#c0c6c9"
+            android:layout_marginTop="7dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/w_6"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:id="@+id/w_btn_wj"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="#727171"
+                android:onClick="onClick"
+                android:text="忘记密码"
+                android:layout_weight="1" />
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:background="#c0c6c9"
+                android:layout_above="@id/w_7"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/w_btn_qr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#727171"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                android:text="登录"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_num"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/w_1"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tel_left_bg"
+            android:gravity="center"
+            android:text="+86"/>
+        <EditText
+            android:id="@+id/phone_num_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="phone"
+            android:paddingLeft="3dp"
+            android:hint="请输入您的手机号"
+            android:textColorHint="#595857"
+            android:background="#dddcd6"
+            android:textColor="#000"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_pass"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/phone_num"
+        android:layout_alignStart="@+id/phone_num">
+        <EditText
+            android:id="@+id/phone_pass_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:hint="请输入密码"
+            android:textColorHint="#595857"
+            android:background="#dddcd6"
+            android:textColor="#000"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/register_delete"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="12dp"
+        android:cropToPadding="true"
+        android:adjustViewBounds="false"
+        android:layout_alignTop="@+id/w_1"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

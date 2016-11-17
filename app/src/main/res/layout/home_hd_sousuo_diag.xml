@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#cc0"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_choose_picture"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#fff"
+            android:text="相册选择"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/bt_take_picture"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#c0c"
+            android:text="拍照"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:background="#cc0"
+        android:text="取消"
+        android:textSize="14sp"/>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <ImageView
+        android:id="@+id/me_notes_item_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/up_pic_default"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/me_notes_listitem_photoname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="套路"
+        android:textSize="15sp"
+        android:textColor="#7d7d7d"
+        android:layout_toRightOf="@id/me_notes_item_photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        />
+    
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:background="@drawable/didian"
+        android:layout_toRightOf="@id/me_notes_item_photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/me_notes_listitem_didian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="天安门广场"
+        android:textColor="#7d7d7d"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/me_notes_item_photo"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/me_notes_listitem_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1张"
+        android:textColor="#7d7d7d"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/me_notes_item_photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        />
+
+
+</RelativeLayout>

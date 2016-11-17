@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home__hd__content_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.duckr.duckr.Home_HD_Content_Activity">
+    <RelativeLayout
+        android:id="@+id/titt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            android:text="邀约详情"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="black"
+        android:background="@drawable/btn_return"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/share"/>
+    <WebView
+        android:id="@+id/home_content_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_g"
+        android:layout_below="@id/titt"
+        >
+
+    </WebView>
+    <LinearLayout
+        android:id="@+id/btn_g"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e6eae3"
+            android:layout_below="@id/home_content_web"
+            android:layout_above="@+id/btn_g"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:layout_weight="1" >
+                <ImageView
+                    android:id="@+id/btn_ly"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/pinglun_1"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="留言"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="#c0c6c9"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:layout_weight="1" >
+                <ImageView
+                    android:id="@+id/btn_xq"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/xingqu_2"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="感兴趣"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="#c0c6c9"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#fff"
+                android:paddingTop="5dp"
+                android:layout_weight="1" >
+                <ImageView
+                    android:id="@+id/btn_zx"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/zixun"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="咨询"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btn_gm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#e83929"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_weight="1.8"
+                android:text="加入"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
