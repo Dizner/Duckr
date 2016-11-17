@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.duckr.duckr.adapter.PhotoPagerAdapter;
+import cn.duckr.duckr.utils.HackyViewPager;
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class PhotoActivity extends AppCompatActivity{
     @ViewInject(R.id.photo_content)
@@ -29,6 +32,9 @@ public class PhotoActivity extends AppCompatActivity{
     private List<View> view;
     private ImageOptions options;
     private ImageView imgView;
+    private PhotoView pview;
+    HackyViewPager vp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,7 @@ public class PhotoActivity extends AppCompatActivity{
         x.view().inject(this);
         Intent intent=getIntent();
         Bundle bundle = intent.getExtras();
+        vp= (HackyViewPager) findViewById(R.id.photo_content);
         ArrayList<String> url = bundle.getStringArrayList("url");
         int tag = intent.getIntExtra("tag", 0);
         boolean type = intent.getBooleanExtra("type", false);
@@ -65,20 +72,36 @@ public class PhotoActivity extends AppCompatActivity{
             iv.start();
         }else{
             for (int i = 0; i < url.size(); i++) {
-                imgView= new ImageView(this);
+                pview=new PhotoView(this);
+//                imgView= new ImageView(this);
 //            ZoomImageView v= new ZoomImageView(this);
-                imgView.setOnClickListener(new View.OnClickListener() {
+//                imgView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        finish();
+//                    }
+//                });
+//                pview.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//
+//                    }
+//                });
+
+                pview.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onPhotoTap(View view, float x, float y) {
                         finish();
                     }
                 });
-                x.image().bind(imgView, url.get(i), options);
-                view.add(imgView);
+//                x.image().bind(imgView, url.get(i), options);
+                x.image().bind(pview, url.get(i), options);
+//                view.add(imgView);
+                view.add(pview);
             }
         }
 
-        photo_content.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 photo_count.setText(position+1+"/"+view.size());
@@ -94,8 +117,8 @@ public class PhotoActivity extends AppCompatActivity{
 
             }
         });
-        photo_content.setAdapter(new PhotoPagerAdapter(view,PhotoActivity.this));
-        photo_content.setCurrentItem(tag);
+        vp.setAdapter(new PhotoPagerAdapter(view,PhotoActivity.this));
+        vp.setCurrentItem(tag);
     }
 
 }
